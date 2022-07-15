@@ -1,0 +1,53 @@
+[
+    {
+        "functionType": "Assemble",
+        "resources": [
+            {
+                "type": "Local",
+                "properties": {
+                    "Image": "fedor89/assemble"
+                }
+            },
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "https://47y1z5zwjk.execute-api.us-east-1.amazonaws.com/Assemble"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "Shift",
+        "resources": [
+            {
+                "type": "Local",
+                "properties": {
+                    "Image": "fedor89/shift"
+                }
+            },
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "https://3wytrbp5og.execute-api.us-east-1.amazonaws.com/Shift"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "Split",
+        "resources": [
+            {
+                "type": "Local",
+                "properties": {
+                    "Image": "fedor89/split"
+                }
+            },
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "https://5g4b7j3cp4.execute-api.us-east-1.amazonaws.com/Split"
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,28 @@
+2022-07-15 07:27:49,053 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:123] Using UNIX Socket for connecting to Docker Host. from Demo
+2022-07-15 07:27:49,538 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:74] Docker network for function containers already exits! Make sure this is set up correctly! from Demo
+2022-07-15 07:27:49,913 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:97] Discovered function sajadkh/count_pattern at port 8802 with id dc10fba25f1a8a5d2286029a31cf836dbd86223f547764016bba10854e3a8adc. from Demo
+2022-07-15 07:27:49,920 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:97] Discovered function sajadkh/sum at port 8801 with id 855c675032c008224a07c771d4c149c8359c65e55d6573150bf3e48a797f833f. from Demo
+2022-07-15 07:27:49,926 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:97] Discovered function sajadkh/split at port 8803 with id d0bd694c09da177027d1df5534ae4c56b31ba44c64e229d095fd6d9d4cae1184. from Demo
+2022-07-15 07:27:49,987 INFO [pool-1-thread-1] a.u.d.e.c.v.VerticleManager [VerticleManager.java:62] Deployed 40 verticles. from Demo
+2022-07-15 07:27:50,004 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:243] Already running: sajadkh/sum from Demo
+2022-07-15 07:27:50,022 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:243] Already running: sajadkh/count_pattern from Demo
+2022-07-15 07:27:50,041 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:243] Already running: sajadkh/split from Demo
+2022-07-15 07:27:50,238 INFO [pool-1-thread-1] a.u.d.e.c.c.Control [Control.java:63] Pausing enactment. from Demo
+2022-07-15 07:27:53,861 INFO [AWT-EventQueue-0] a.u.d.e.c.c.Control [Control.java:53] Resuming enactment. from Demo
+2022-07-15 07:27:53,895 INFO [vert.x-eventloop-thread-0] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:156] Local function sajadkh/split triggerred. from Demo
+2022-07-15 07:27:54,223 INFO [vert.x-eventloop-thread-0] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:161] Local function sajadkh/split finished. from Demo
+2022-07-15 07:27:54,600 INFO [vert.x-eventloop-thread-2] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:156] Local function sajadkh/count_pattern triggerred. from Demo
+2022-07-15 07:27:54,605 INFO [vert.x-eventloop-thread-0] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:156] Local function sajadkh/count_pattern triggerred. from Demo
+2022-07-15 07:27:54,626 INFO [vert.x-eventloop-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:156] Local function sajadkh/count_pattern triggerred. from Demo
+2022-07-15 07:27:54,631 INFO [vert.x-eventloop-thread-0] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:161] Local function sajadkh/count_pattern finished. from Demo
+2022-07-15 07:27:54,650 INFO [vert.x-eventloop-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:156] Local function sajadkh/count_pattern triggerred. from Demo
+2022-07-15 07:27:54,741 INFO [vert.x-eventloop-thread-2] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:161] Local function sajadkh/count_pattern finished. from Demo
+2022-07-15 07:27:54,789 INFO [vert.x-eventloop-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:161] Local function sajadkh/count_pattern finished. from Demo
+2022-07-15 07:27:54,807 INFO [vert.x-eventloop-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:161] Local function sajadkh/count_pattern finished. from Demo
+2022-07-15 07:27:54,957 INFO [vert.x-eventloop-thread-3] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:156] Local function sajadkh/sum triggerred. from Demo
+2022-07-15 07:27:55,035 INFO [vert.x-eventloop-thread-3] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:161] Local function sajadkh/sum finished. from Demo
+2022-07-15 07:27:55,051 INFO [vert.x-eventloop-thread-0] a.u.d.e.i.o.OutputDataPrinter [OutputDataPrinter.java:30] Workflow executed correctly. from Demo
+2022-07-15 07:27:55,052 INFO [vert.x-eventloop-thread-0] a.u.d.e.i.o.OutputDataPrinter [OutputDataPrinter.java:31] Enactment result: {"totalCount":4} from Demo
+2022-07-15 07:27:55,056 INFO [vert.x-eventloop-thread-0] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:304] Removing container sajadkh/sum. from Demo
+2022-07-15 07:27:55,547 INFO [vert.x-eventloop-thread-0] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:304] Removing container sajadkh/count_pattern. from Demo
+2022-07-15 07:27:56,060 INFO [vert.x-eventloop-thread-0] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:304] Removing container sajadkh/split. from Demo
