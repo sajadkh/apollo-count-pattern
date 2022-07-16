@@ -72,6 +72,10 @@ workflowBody:
       type: "collection"
     - name: "unModifiedBatchArr"
       type: "collection"
+    - name: "mustBePartialModifiedStr"
+      type: "string"
+    - name: "mustBePartialModifiedRemainedPattern"
+      type: "number"
 - parallelFor:
     name: "forEachModification"
     dataIns:
@@ -98,6 +102,22 @@ workflowBody:
       type: "collection"
       source: "Modify/modifiedStr"
 - function:
+    name: "PartialModify"
+    type: "PartialModify"
+    dataIns:
+    - name: "mustBePartialModified"
+      type: "string"
+      source: "Sum/mustBePartialModifiedStr"
+    - name: "mustBePartialModifiedRemainedPattern"
+      type: "number"
+      source: "Sum/mustBePartialModifiedRemainedPattern"
+    - name: "pattern"
+      type: "string"
+      source: "task2/p"
+    dataOuts:
+    - name: "partialyModifiedStr"
+      type: "string"
+- function:
     name: "Concat"
     type: "Concat"
     dataIns:
@@ -107,6 +127,9 @@ workflowBody:
     - name: "unModifiedStrArr"
       type: "collection"
       source: "Sum/unModifiedBatchArr"
+    - name: "partialyModifiedStr"
+      type: "string"
+      source: "PartialModify/partialyModifiedStr"
     dataOuts:
     - name: "modifiedStr"
       type: "string"
