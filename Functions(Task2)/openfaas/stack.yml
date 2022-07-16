@@ -1,0 +1,28 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080 # replace with OpenFaaS gateway address
+functions:
+  CountPattern:
+    lang: python3-flask
+    handler: ../functions/CountPattern
+    image: sajadkh/apollo_count_pattern
+  Sum:
+    lang: python3-flask
+    handler: ../functions/Sum    
+    image: sajadkh/apollo_task2_sum
+  Split:
+    lang: python3-flask
+    handler: ../functions/Split
+    image: sajadkh/apollo_split
+  Modify:
+    lang: python3-flask
+    handler: ../functions/Modify
+    image: sajadkh/apollo_modify
+  Concat:
+    lang: python3-flask
+    handler: ../functions/Concat
+    image: sajadkh/apollo_concat
+
+
+  

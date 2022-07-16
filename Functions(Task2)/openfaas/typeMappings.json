@@ -1,0 +1,35 @@
+[
+	{
+		"functionType": "Sum",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/sum"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "CountPattern",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/count_pattern"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "Split",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/split"
+				}
+			}
+		]
+	}
+]
