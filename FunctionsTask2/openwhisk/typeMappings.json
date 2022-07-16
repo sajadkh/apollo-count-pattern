@@ -31,5 +31,27 @@
                 }
             }
         ]
+    },
+    {
+        "functionType": "Concat",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/Concat"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "Modify",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/Modify"
+                }
+            }
+        ]
     }
 ]

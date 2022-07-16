@@ -32,7 +32,7 @@ createMappings () {
 op=$1
 
 functionBaseFolder="../functions"
-functions=("CountPattern" "Split" "Sum")
+functions=("CountPattern" "Split" "Sum" "Concat" "Modify")
 . ./wsk.config
 
 while [ ! $# -eq 0 ]
@@ -63,6 +63,3 @@ fi
 for i in ${!functions[@]}; do
   ./build.sh $functionBaseFolder/${functions[$i]} $op
 done
-# ./build.sh ../functions/CountPattern $op
-# ./build.sh ../functions/Split $op
-# ./build.sh ../functions/Sum $op

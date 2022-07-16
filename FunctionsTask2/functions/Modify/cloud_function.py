@@ -13,7 +13,7 @@ def cloud_function(json_input):
     res = {
         "modifiedStr": must_be_modified_batch_str
     }
-    print(res)
+    
     return res
 
 
