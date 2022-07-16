@@ -1,0 +1,35 @@
+[
+	{
+		"functionType": "Sum",
+		"resources": [
+			{
+				"type": "serverless",
+				"properties": {
+					"url": "http://94.101.178.66/api/v1/namespaces/guest/actions/Sum?result=true&blocking=true"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "CountPattern",
+		"resources": [
+			{
+				"type": "serverless",
+				"properties": {
+					"url": "http://94.101.178.66/api/v1/namespaces/guest/actions/CountPattern?result=true&blocking=true"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "Split",
+		"resources": [
+			{
+				"type": "serverless",
+				"properties": {
+					"url": "http://94.101.178.66/api/v1/namespaces/guest/actions/Split?result=true&blocking=true"
+				}
+			}
+		]
+	}
+]

@@ -12,3 +12,7 @@ def cloud_function(json_input):
         "batchArr": result
     }
     return res
+
+
+def main(args):
+    return cloud_function(args)

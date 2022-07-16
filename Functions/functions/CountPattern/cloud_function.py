@@ -9,3 +9,7 @@ def cloud_function(json_input):
         "count": count
     }
     return res
+
+
+def main(args):
+    return cloud_function(args)

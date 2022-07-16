@@ -8,3 +8,7 @@ def cloud_function(json_input):
         "totalCount": total_count
     }
     return res
+
+
+def main(args):
+    return cloud_function(args)
