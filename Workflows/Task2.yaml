@@ -105,7 +105,7 @@ workflowBody:
     name: "PartialModify"
     type: "PartialModify"
     dataIns:
-    - name: "mustBePartialModified"
+    - name: "mustBePartialModifiedStr"
       type: "string"
       source: "Sum/mustBePartialModifiedStr"
     - name: "mustBePartialModifiedRemainedPattern"
