@@ -5,7 +5,7 @@
 			{
 				"type": "Local",
 				"properties": {
-					"Image": "sajadkh/sum"
+					"Image": "sajadkh/apollo_task1_sum"
 				}
 			}
 		]
@@ -16,7 +16,7 @@
 			{
 				"type": "Local",
 				"properties": {
-					"Image": "sajadkh/count_pattern"
+					"Image": "sajadkh/apollo_count_pattern"
 				}
 			}
 		]
@@ -27,7 +27,7 @@
 			{
 				"type": "Local",
 				"properties": {
-					"Image": "sajadkh/split"
+					"Image": "sajadkh/apollo_split"
 				}
 			}
 		]

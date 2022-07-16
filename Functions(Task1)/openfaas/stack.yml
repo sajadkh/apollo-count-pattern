@@ -6,14 +6,14 @@ functions:
   CountPattern:
     lang: python3-flask
     handler: ../functions/CountPattern
-    image: sajadkh/count_pattern
+    image: sajadkh/apollo_count_pattern
   Sum:
     lang: python3-flask
     handler: ../functions/Sum    
-    image: sajadkh/sum
+    image: sajadkh/apollo_task1_sum
   Split:
     lang: python3-flask
     handler: ../functions/Split
-    image: sajadkh/split
+    image: sajadkh/apollo_split
 
   
