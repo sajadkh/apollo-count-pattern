@@ -62,6 +62,9 @@ workflowBody:
     - name: "batchArr"
       type: "collection"
       source: "Split/batchArr"
+    - name: "threshold"
+      type: "number"
+      source: "task2/m"
     dataOuts:
     - name: "totalCount"
       type: "number"
