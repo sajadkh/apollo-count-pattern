@@ -23,6 +23,9 @@ functions:
     lang: python3-flask
     handler: ../functions/Concat
     image: sajadkh/apollo_concat
-
+  PartialModify:
+    lang: python3-flask
+    handler: ../functions/PartialModify
+    image: sajadkh/apollo_partial_modify
 
   

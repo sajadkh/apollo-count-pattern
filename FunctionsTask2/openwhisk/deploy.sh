@@ -32,7 +32,7 @@ createMappings () {
 op=$1
 
 functionBaseFolder="../functions"
-functions=("CountPattern" "Split" "Sum" "Concat" "Modify")
+functions=("CountPattern" "Split" "Sum" "Concat" "Modify" "PartialModify")
 . ./wsk.config
 
 while [ ! $# -eq 0 ]

@@ -42,13 +42,25 @@
 				}
 			}
 		]
-	},{
+	},
+	{
 		"functionType": "Concat",
 		"resources": [
 			{
 				"type": "Local",
 				"properties": {
 					"Image": "sajadkh/apollo_concat"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "PartialModify",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/apollo_partial_modify"
 				}
 			}
 		]
