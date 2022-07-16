@@ -1,0 +1,68 @@
+[
+	{
+		"functionType": "Sum",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/apollo_task2_sum"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "CountPattern",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/apollo_count_pattern"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "Split",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/apollo_split"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "Modify",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/apollo_modify"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "Concat",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/apollo_concat"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "PartialModify",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "sajadkh/apollo_partial_modify"
+				}
+			}
+		]
+	}
+]

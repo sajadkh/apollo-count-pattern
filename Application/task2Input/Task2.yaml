@@ -1,0 +1,142 @@
+---
+name: "task2"
+dataIns:
+- name: "s"
+  type: "string"
+  source: "s"
+- name: "w"
+  type: "number"
+  source: "w"
+- name: "p"
+  type: "string"
+  source: "p"
+- name: "m"
+  type: "number"
+  source: "m"
+workflowBody:
+- function:
+    name: "Split"
+    type: "Split"
+    dataIns:
+    - name: "originalStr"
+      type: "string"
+      source: "task2/s"
+    - name: "wordPerBatch"
+      type: "number"
+      source: "task2/w"
+    dataOuts:
+    - name: "batchArr"
+      type: "collection"
+- parallelFor:
+    name: "forEachBatch"
+    dataIns:
+    - name: "iterator"
+      type: "collection"
+      source: "Split/batchArr"
+    iterators: ["iterator"]
+    loopBody:
+    - function:
+        name: "CountPattern"
+        type: "CountPattern"
+        dataIns:
+        - name: "batchStr"
+          type: "collection"
+          source: "forEachBatch/iterator"
+        - name: "pattern"
+          type: "string"
+          source: "task2/p"
+        dataOuts:
+        - name: "count"
+          type: "number"
+    dataOuts:
+    - name: "countArr"
+      type: "collection"
+      source: "CountPattern/count"
+- function:
+    name: "Sum"
+    type: "Sum"
+    dataIns:
+    - name: "countArr"
+      type: "collection"
+      source: "forEachBatch/countArr"
+    - name: "batchArr"
+      type: "collection"
+      source: "Split/batchArr"
+    - name: "threshold"
+      type: "number"
+      source: "task2/m"
+    dataOuts:
+    - name: "totalCount"
+      type: "number"
+    - name: "mustBeModifiedBatchArr"
+      type: "collection"
+    - name: "unModifiedBatchArr"
+      type: "collection"
+    - name: "mustBePartialModifiedStr"
+      type: "string"
+    - name: "mustBePartialModifiedRemainedPattern"
+      type: "number"
+- parallelFor:
+    name: "forEachModification"
+    dataIns:
+    - name: "iterator"
+      type: "collection"
+      source: "Sum/mustBeModifiedBatchArr"
+    iterators: ["iterator"]
+    loopBody:
+    - function:
+        name: "Modify"
+        type: "Modify"
+        dataIns:
+        - name: "mustBeModifiedBatchStr"
+          type: "collection"
+          source: "forEachModification/iterator"
+        - name: "pattern"
+          type: "string"
+          source: "task2/p"
+        dataOuts:
+        - name: "modifiedStr"
+          type: "string"
+    dataOuts:
+    - name: "modifiedStrArr"
+      type: "collection"
+      source: "Modify/modifiedStr"
+- function:
+    name: "PartialModify"
+    type: "PartialModify"
+    dataIns:
+    - name: "mustBePartialModifiedStr"
+      type: "string"
+      source: "Sum/mustBePartialModifiedStr"
+    - name: "mustBePartialModifiedRemainedPattern"
+      type: "number"
+      source: "Sum/mustBePartialModifiedRemainedPattern"
+    - name: "pattern"
+      type: "string"
+      source: "task2/p"
+    dataOuts:
+    - name: "partialyModifiedStr"
+      type: "string"
+- function:
+    name: "Concat"
+    type: "Concat"
+    dataIns:
+    - name: "modifiedStrArr"
+      type: "collection"
+      source: "forEachModification/modifiedStrArr"
+    - name: "unModifiedStrArr"
+      type: "collection"
+      source: "Sum/unModifiedBatchArr"
+    - name: "partialyModifiedStr"
+      type: "string"
+      source: "PartialModify/partialyModifiedStr"
+    dataOuts:
+    - name: "modifiedStr"
+      type: "string"
+dataOuts:
+- name: "totalCount"
+  type: "number"
+  source: "Sum/totalCount"
+- name: "modifiedStr"
+  type: "string"
+  source: "Concat/modifiedStr"

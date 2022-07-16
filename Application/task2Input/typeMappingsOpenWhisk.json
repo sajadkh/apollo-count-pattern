@@ -1,0 +1,68 @@
+[
+    {
+        "functionType": "CountPattern",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/CountPattern"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "Split",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/Split"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "Sum",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/Sum"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "Concat",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/Concat"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "Modify",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/Modify"
+                }
+            }
+        ]
+    },
+    {
+        "functionType": "PartialModify",
+        "resources": [
+            {
+                "type": "Serverless",
+                "properties": {
+                    "Uri": "http://127.0.0.1:5000/PartialModify"
+                }
+            }
+        ]
+    }
+]
