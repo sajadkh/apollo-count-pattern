@@ -1,0 +1,35 @@
+<configuration>
+  <module class="at.uibk.dps.ee.control.modules.EnactmentVerticleModule">
+    <property name="pauseOnStart">true</property>
+    <property name="deploymentNumber">8</property>
+    <property name="delayInSeconds">0</property>
+  </module>
+  <module class="at.uibk.dps.ee.docker.modules.LocalDockerModule">
+    <property name="usedOs">Unix</property>
+  </module>
+  <module class="at.uibk.dps.ee.enactables.modules.CoreFunctionsModule"/>
+  <module class="at.uibk.dps.ee.io.modules.InputReaderFileModule">
+    <property name="filePath">/home/sajadkh/Work/Caesar/task2Input/task2Input.json</property>
+  </module>
+  <module class="at.uibk.dps.ee.io.modules.LoggingModule">
+    <property name="pathToConfigFile">./logging/config/logback.xml</property>
+  </module>
+  <module class="at.uibk.dps.ee.io.modules.OutputPrinterModule"/>
+  <module class="at.uibk.dps.ee.io.modules.SpecificationInputModule">
+    <property name="filePathAfcl">/home/sajadkh/Work/Caesar/task2Input/Task2.yaml</property>
+    <property name="filePathMappingFile">/home/sajadkh/Work/Caesar/task2Input/typeMappingBoth.json</property>
+  </module>
+  <module class="at.uibk.dps.ee.visualization.modules.EnactmentViewerModule">
+    <property name="closeOnTerminate">false</property>
+    <property name="updatePeriodMs">100</property>
+  </module>
+  <module class="at.uibk.dps.sc.core.modules.CapacityLimitationModule">
+    <property name="maximalTaskNumber">4</property>
+  </module>
+  <module class="at.uibk.dps.sc.core.modules.SchedulerModule">
+    <property name="schedulingMode">Custom</property>
+    <property name="mappingsToPick">1</property>
+    <property name="sizeThresholdKb">10</property>
+    <property name="resourceArbitration">FCFS</property>
+  </module>
+</configuration>

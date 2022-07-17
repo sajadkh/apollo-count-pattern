@@ -1,6 +1,6 @@
 # Apollo Project Task
 In this repository, we want to deploy two versions of a workflow task on the available resources. We user Docker and Apache OpenWhisk as our resources.
-This Project is based on [Apollo Project](https://github.com/Apollo-Core/Tutorial)
+This Project is based on [Apollo Project](https://github.com/Apollo-Core/Tutorial).
 
 
 ## Dependency
@@ -53,6 +53,9 @@ The below diagram shows the workflow structure for this task.
   <img src="./Media/Task2.png" />
 </p>
 
+### Task3
+In this part of project I provide a custom scheduler for apollo project. If there are less than 10 generated batch from string then it deploy all operands on local resources, otherwise it deploy them on Apache OpenWhisk.
+
 ## Create Resources
 In this project you can choose multiple sources for deploying your resources. In this document we consider local node and Apache OpenWhisk as our sources.
 
@@ -103,3 +106,8 @@ $ cp ../FunctionTask2/openfaas/typeMappings.json ./Task2Input/typeMappingsDocker
 $ cp ../FunctionTask2/openwhisk/typeMappings.json ./Task2Input/typeMappingsOpenWhisk.json
 ```
 Then for running tasks, run the related launch file for each tasks which is in ./Application/launches/ path.
+
+## Custom Scheduler
+For providing these scheduler I extend SchedulerAbstract class which is exist in sc-core package. In that file I overrided the chooseMappingSubset function with new logic. I extracted the word counts in the text input and divide it into the wordPerBatch count which is provided in input. If it is less than 10 I choose Local resources for deploying task otherwise serverless deployment will be selected. The builded jar package is exist in ./Scheduler folder and also there are the source codes of it based on [https://github.com/Apollo-Core/SC-Core](https://github.com/Apollo-Core/SC-Core).
+
+For using this scheduler, you must add jar file into java class path and after that you can choose it in scheduling menu in demo UI.
