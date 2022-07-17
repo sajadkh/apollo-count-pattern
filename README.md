@@ -3,7 +3,6 @@ In this repository, we want to deploy two versions of a workflow task on the ava
 
 
 ## Dependency
------
 ### Apache OpenWhisk
 You can use the [Apache Openwhisk documentation](https://openwhisk.apache.org) for installation and more use cases or you can install it by the below commands.
 
@@ -36,7 +35,6 @@ $ curl -sSL https://cli.openfaas.com | sudo sh
 ```
 
 ## Tasks
----
 We have two version of one workflow task. In this task, we want to  search through a given text string and count the occurrences of a given string pattern in that text
 
 ### Task1
@@ -55,7 +53,6 @@ The below diagram shows the workflow structure for this task.
 </p>
 
 ## Create Resources
----
 In this project you can choose multiple sources for deploying your resources. In this document we consider local node and Apache OpenWhisk as our sources.
 
 ### Deploy on Local Node
@@ -93,7 +90,6 @@ After successful installation the typeMappings.json file will be updated by vali
 
 
 ## Run Application
----
 For running the task on demo application you must put the generated files in previous steps into ./Application folder. For update values run below commands:
 
 ```bash
