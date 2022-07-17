@@ -1,5 +1,6 @@
 # Apollo Project Task
 In this repository, we want to deploy two versions of a workflow task on the available resources. We user Docker and Apache OpenWhisk as our resources.
+This Project is based on [Apollo Project](https://github.com/Apollo-Core/Tutorial)
 
 
 ## Dependency
